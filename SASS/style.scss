@@ -11,6 +11,7 @@
 
 // component
 @import 'components/btn';
+@import 'components/grid';
 
 
 // layout 
@@ -228,17 +229,23 @@ $w : 1400px;
 }
 
 
-// 迴圈
+//迴圈
 
 @for $i from 1 through 10 {
-    .box-#{$i} {
-        width: $i * 1px;
-    }
+ .box-#{$i} {
+    width: $i * 1px;
+ }
 }
 
-@for $i from 1 through 10 {
-    .push-#{$i} {
-        position: relative;
-        left: $i * 1px;
-    }
+@mixin push($num){
+    @for $i from 1 through $num {
+        .push-#{$i} {
+          position: relative;
+          left: $i * 1px
+        }
+      }
 }
+
+
+// @include push(100);
+
