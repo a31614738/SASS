@@ -151,4 +151,94 @@ body {
   }
 }
 
+.box-1 {
+  width: 1px;
+}
+
+.box-2 {
+  width: 2px;
+}
+
+.box-3 {
+  width: 3px;
+}
+
+.box-4 {
+  width: 4px;
+}
+
+.box-5 {
+  width: 5px;
+}
+
+.box-6 {
+  width: 6px;
+}
+
+.box-7 {
+  width: 7px;
+}
+
+.box-8 {
+  width: 8px;
+}
+
+.box-9 {
+  width: 9px;
+}
+
+.box-10 {
+  width: 10px;
+}
+
+.push-1 {
+  position: relative;
+  left: 1px;
+}
+
+.push-2 {
+  position: relative;
+  left: 2px;
+}
+
+.push-3 {
+  position: relative;
+  left: 3px;
+}
+
+.push-4 {
+  position: relative;
+  left: 4px;
+}
+
+.push-5 {
+  position: relative;
+  left: 5px;
+}
+
+.push-6 {
+  position: relative;
+  left: 6px;
+}
+
+.push-7 {
+  position: relative;
+  left: 7px;
+}
+
+.push-8 {
+  position: relative;
+  left: 8px;
+}
+
+.push-9 {
+  position: relative;
+  left: 9px;
+}
+
+.push-10 {
+  position: relative;
+  left: 10px;
+}
+
 /*# sourceMappingURL=style.css.map */
