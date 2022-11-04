@@ -17,40 +17,64 @@ body {
     border: $null;
 }
 
-.wrapper{
-    @if $w{
-        width: 100%;
+.wrapper {
+    width: 100%;
+    background-color: rgb(0, 110, 255);
+    h1 {
+      font-size: 36px;
+
     }
-    @else {
+    nav {
         width: 1200px;
         margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+          width: 150px;
+          height: 50px;
+          background-color: #666;  
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+
+            li {
+                padding: 10px 20px;
+                background-color: rgb(247, 0, 255);
+                &:first-child{
+                    background-color: #f00;
+                }
+                a{
+                    color: #fff;
+                    &:hover{
+                        color: #f00;
+                    }
+                    &::after {
+                        content: '';
+                    } 
+                    &::before {
+                        content: '';
+                    }
+                    
+                }
+            }
+        }
     }
-    
 }
 
-.b {
-    $b:10px !global; 
-    // !global 變成全域變數 都可以取得到
-    // 可以宣告在裡面
-    margin: $b;
+.index {
+  h1 {
+    font-size: 40px;
+    color: aquamarine;
+  }
+
 }
+.about {
+  h1 {
+    font-size: 60px;
+    color: #666
 
-// 改變權重 !default
-
-$a:20px;
-$a:30px !default;
-
-.a {
-    font-size: $a;
-}
-
-// 轉型字串
-$url:icon1;
-.icon{
-    background-image: url('#{$url}.jpg');
-}
-
-$class:'top';
-.#{$class}{
-    margin-top: 10px;
+  }
 }

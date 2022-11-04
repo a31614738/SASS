@@ -10,22 +10,55 @@ body {
 
 .wrapper {
   width: 100%;
+  background-color: rgb(0, 110, 255);
+}
+.wrapper h1 {
+  font-size: 36px;
+}
+.wrapper nav {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper nav .logo {
+  width: 150px;
+  height: 50px;
+  background-color: #666;
+}
+.wrapper nav ul {
+  list-style: none;
+  display: flex;
+}
+.wrapper nav ul li {
+  padding: 10px 20px;
+  background-color: rgb(247, 0, 255);
+}
+.wrapper nav ul li:first-child {
+  background-color: #f00;
+}
+.wrapper nav ul li a {
+  color: #fff;
+}
+.wrapper nav ul li a:hover {
+  color: #f00;
+}
+.wrapper nav ul li a::after {
+  content: "";
+}
+.wrapper nav ul li a::before {
+  content: "";
 }
 
-.b {
-  margin: 10px;
+.index h1 {
+  font-size: 40px;
+  color: aquamarine;
 }
 
-.a {
-  font-size: 20px;
-}
-
-.icon {
-  background-image: url("icon1.jpg");
-}
-
-.top {
-  margin-top: 10px;
+.about h1 {
+  font-size: 60px;
+  color: #666;
 }
 
 /*# sourceMappingURL=style.css.map */
