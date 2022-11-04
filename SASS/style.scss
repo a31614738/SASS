@@ -1,20 +1,80 @@
-// 要先宣告不能放後面會吃不到
-$fontSize : 10px; // 數值
-$color:#333;    // 顏色 
-$bgc:#fff;      // 背景色
-$fontFamily:'微軟正黑體'; // 字串
-$margin:10px 20px 5px 4px; // list
-$null:null; // 空值
-$w: true;// false 用在判斷式身上
+/*css 註解*/
+
+// scss 外部檔案
+//變數
+@import 'base/font';
+@import 'base/color';
+@import 'base/common';
+
+// mixin
+@import 'mixin/mixin';
+
+// component
+@import 'components/btn';
+
+
+// layout 
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/login';
+@import 'layout/nav';
+
+// css => @import url();
+
 
 body {
-    margin:$margin;
+    margin: $margin;
     padding: 0;
     font-size: $fontSize;
     color: $color;
     background-color: $bgc;
     font-family: $fontFamily;
     border: $null;
+}
+
+.wrapper {
+    @if $w {
+        width: 100%;
+    }
+
+    @else {
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+
+
+// .b {
+//     //$b : 10px !global; // 轉成全域變數
+//     //margin: $b;
+// }
+
+// div {
+//     margin: $b;
+// }
+
+// 改變權重 !default
+$a : 20px;
+$a : 30px !default; //預設值
+
+
+.a {
+    font-size: $a;
+}
+
+//======  轉型字串  ==========
+$url : icon1; //url
+
+.icon {
+    background-image: url('#{$url}.jpg');
+}
+
+// class / 屬性
+$class : 'bottom';
+
+.#{$class} {
+    margin-#{$class}: 10px;
 }
 
 .wrapper {
@@ -43,38 +103,110 @@ body {
             li {
                 padding: 10px 20px;
                 background-color: rgb(247, 0, 255);
-                &:first-child{
-                    background-color: #f00;
+
+                //偽元素
+                a {
+                   color : rgb(222, 0, 0);
+                    &:first-child {
+                    color : rgb(157, 255, 0);
+                     &:hover {
+                        color : rgb(0, 217, 255);
+                     }
+                   }
+                   &:hover {
+                     color:rgb(71, 0, 0)
+                   }
+                   &::after {
+                    content: '';
+                   }
+                   &::before {
+                      content: '';
+                   }
                 }
-                a{
-                    color: #fff;
-                    &:hover{
-                        color: #f00;
-                    }
-                    &::after {
-                        content: '';
-                    } 
-                    &::before {
-                        content: '';
-                    }
-                    
-                }
+
             }
         }
     }
 }
+// 運算
 
-.index {
-  h1 {
-    font-size: 40px;
-    color: aquamarine;
-  }
-
+.box {
+  width:  10px + 10;
+  height:  100px - 20px;
+  margin: 10 * 10 + px;
+  //font : calc(20 / 5) + px; //除法要特別注意 
 }
-.about {
-  h1 {
-    font-size: 60px;
-    color: #666
 
+$w : 1200;
+
+.wrapper-full {
+  @if $w == 100 {
+    width: 100vw;
+  }@else if $w == 1200 {
+    width: 1200px;
+    margin: 0 auto;
   }
+}
+
+
+.btn {
+    $outline : true;
+    $outline_bgc : #e2e2e2;
+
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s all ease;
+    @if $outline{
+        border: 1px solid #333;
+        background-color: $outline_bgc;
+        &:hover {
+            background-color: darken($outline_bgc  , 60); //sass顏色函式 
+        }
+    }@else {
+        background-color: #333;
+        color: #fff;
+        &:hover {
+            background-color: rgb(19, 19, 19);  
+        }  
+    }
+}
+
+// mixin 
+$w : 1400px;
+
+
+
+//不好寫法
+// @mixin boxcenter($w , $top ,$borderColo ,$borderRadius ){
+//     width: $w; 
+//     margin: $top auto 0;
+//     border: 1px solid $borderColor;
+//     border-radius: $borderRadius;
+//  }
+
+
+
+
+.box-1 {
+ @include boxcenter(200px);
+ background-color: #eee;
+ height: 100px;
+}
+
+.box-2 {
+  @include boxcenter(136px);
+  background-color: #f20;
+  height: 100px;
+}
+
+.box-3 {
+  @include border(#f20,  50%);
+  width:100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.wrapper {
+   @include layout(full);
 }
