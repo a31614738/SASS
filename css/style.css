@@ -328,4 +328,28 @@ body {
   width: 10px;
 }
 
+.img_img1 {
+  background-image: url("images/img1.jpg");
+}
+
+.img_img2 {
+  background-image: url("images/img2.jpg");
+}
+
+.img_img3 {
+  background-image: url("images/img3.jpg");
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+* {
+  font-size: 14px;
+}
+
 /*# sourceMappingURL=style.css.map */

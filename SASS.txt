@@ -1,0 +1,26 @@
+ 11/4 的上課影片
+
+ 安裝 sass 指令:(使用命令提示字元CMD 或是終端機來安裝)
+
+ npm install -g sass
+
+ 檢查是否有安裝成功-
+
+ sass --version
+
+ * 如果有安裝成功，會有sass 版本 *
+
+ 2. vscode 終端機 sass --version查詢版本  
+    > 輸入 sass sass/style.scss css/style.css 讓它多一個資料夾
+    > 輸入 sass sass/style.scss css/style.css --watch 監看
+
+
+ .b {
+    $b:10px !global; 
+    // !global 變成全域變數 都可以取得到
+    // 可以宣告在裡面
+    margin: $b;
+ }
+
+ // 改變權重 !default
+ 

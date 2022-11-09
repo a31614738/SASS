@@ -249,3 +249,33 @@ $w : 1400px;
 
 // @include push(100);
 
+// each
+
+$img : (
+'key':value,
+'key2':vlue2
+); // map
+
+.box {
+  content:map-get($img,key1);
+}
+
+$images:img1 img2 img3;
+
+@each $i in $images {
+  .img_#{$i} {
+    background-image:url('images/#{$i}.jpg');
+  }
+}
+
+$title :(
+  'h1':40px,
+  'h2':30px,
+  '*':14px
+);
+
+@each $k,$v in $title {
+  #{$k} {
+    font-size: $v;
+  }
+}
