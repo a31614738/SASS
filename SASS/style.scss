@@ -271,11 +271,18 @@ $images:img1 img2 img3;
 $title :(
   'h1':40px,
   'h2':30px,
+  'span':15px,
   '*':14px
 );
-
-@each $k,$v in $title {
-  #{$k} {
-    font-size: $v;
+@mixin title($title,$color){
+  @each $k,$v in $title {
+    #{$k} {
+      font-size: $v;
+      color: $color;
+    }
   }
+
 }
+  
+@include title($title,#f20);
+
