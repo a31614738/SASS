@@ -288,44 +288,8 @@ body {
   }
 }
 
-.box-1 {
-  width: 1px;
-}
-
-.box-2 {
-  width: 2px;
-}
-
-.box-3 {
-  width: 3px;
-}
-
-.box-4 {
-  width: 4px;
-}
-
-.box-5 {
-  width: 5px;
-}
-
-.box-6 {
-  width: 6px;
-}
-
-.box-7 {
-  width: 7px;
-}
-
-.box-8 {
-  width: 8px;
-}
-
-.box-9 {
-  width: 9px;
-}
-
-.box-10 {
-  width: 10px;
+.box {
+  content: value1;
 }
 
 .img_img1 {
@@ -340,6 +304,10 @@ body {
   background-image: url("images/img3.jpg");
 }
 
+.img_img4 {
+  background-image: url("images/img4.jpg");
+}
+
 h1 {
   font-size: 40px;
   color: #f20;
@@ -350,14 +318,51 @@ h2 {
   color: #f20;
 }
 
+h3 {
+  font-size: 25px;
+  color: #f20;
+}
+
 span {
-  font-size: 15px;
+  font-size: 16px;
   color: #f20;
 }
 
 * {
   font-size: 14px;
   color: #f20;
+}
+
+.text-primary {
+  color: #ff7300;
+}
+
+.bg-primary {
+  background-color: #ff7300;
+}
+
+.text-secondary {
+  color: #0ed7ff;
+}
+
+.bg-secondary {
+  background-color: #0ed7ff;
+}
+
+.text-success {
+  color: #00fc00;
+}
+
+.bg-success {
+  background-color: #00fc00;
+}
+
+.text-info {
+  color: #e4e4e4;
+}
+
+.bg-info {
+  background-color: #e4e4e4;
 }
 
 /*# sourceMappingURL=style.css.map */
